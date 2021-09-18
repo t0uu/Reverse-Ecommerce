@@ -36,6 +36,7 @@ p,li,button{
         /* margin: -2%; */
         color: var(--secundary);
         position: sticky;
+        top: 0;
         z-index: 999;
     }
     h1{
@@ -127,7 +128,8 @@ p,li,button{
         display: flex;
         flex-direction: column;
         margin: auto;
-        width: 85%;
+        width: 100%;
+
     }
     .Container h2{
         color: var(--secundary);
@@ -170,7 +172,7 @@ p,li,button{
        }
     /*Newsletter*/
     .newsletter{
-        padding: 10%;
+        padding: 5%;
         text-align: center;
         color:var(--fifth);
     }
@@ -204,6 +206,9 @@ p,li,button{
     footer p a{
         font-size: 10px;
         color: var(--secundary);
+    }
+    footer{
+        border-top: 1px solid #fbf9ff3c;
     }
 }
 @media (min-width: 375px ) {
@@ -244,7 +249,7 @@ p,li,button{
         min-width: 80vmin;
     }
     .Discover{
-        top:16em;
+        top:14.5em;
         left: 15%;
     }
     .Discover h2{
@@ -266,6 +271,10 @@ p,li,button{
     header{
     width: 100%;
     }
+    h1{
+        padding-left: 5%;
+    }
+    /*Main*/
     main{
         width: 100%;
     }
@@ -284,6 +293,7 @@ p,li,button{
         left: 33%;
         padding: 4%;
     }
+    /*Section products*/
     .ImgProduct img{
         width: 300px;
     }
@@ -291,4 +301,183 @@ p,li,button{
         padding: 2%;
     }
     
+}
+@media (min-width: 1024px) {
+    header{
+        display: flex;
+        justify-content: center;
+        padding: 0;
+    }
+    h1{
+        font-size: 2em;
+        position: relative;
+        left: 6em;
+    }
+    .menu{
+        right: 16.5em;
+        display: flex;
+        flex:auto
+    }
+    .menu:hover .dropdown{
+        display: flex;
+    }
+    .dropdown{
+        display: flex;
+        position: static;
+        flex-direction: row;
+        justify-content: center;
+        background-color: transparent;
+        min-width: 800px;
+        margin-top: 10%;
+        margin-right: 10%;
+    }
+    .icon{
+        display: none;
+    }
+    .dropdown ul{
+        display: flex;
+        flex: auto;
+        padding: 1px;
+        padding-left: 20px;
+    }
+    .dropdown li{
+        margin-right: 3em;
+    }
+    .dropdown li a{
+        display: flex;
+        font-size: 1.2em;
+
+    }
+    /*Main*/
+    main{
+        display: flex;
+    }
+    .ImagenMain{
+        width: 80%;
+        margin: auto;
+        padding: 1%;
+    }
+    .Discover {
+        top: 28em;
+        left: 28%;
+    }
+    .btnCollection{
+        left:34%;
+        padding: 5%;
+    }
+    .btnCollection a{
+        font-size: 1.2em;
+    }
+    /*Products*/
+    .Container h2{
+        font-size: 2em;
+    }
+     .ContenedorProduct {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: auto;
+        flex-wrap: wrap;
+    }
+}
+@media (min-width: 1285px) {
+    h1{
+        left: 4.5em;
+    }
+    .menu{
+        right: 19em;
+    }
+    /*main*/
+    .ImagenMain{
+     width: 60%;   
+  }
+    .Discover{
+        top: 27em;
+        left: 33%;
+    }
+    .btnCollection{
+        padding: 4%;
+    }
+    .btnCollection a{
+        font-size: 1.3em;
+    }
+    /*Products*/
+    .Container h2{
+        font-size: 3em;
+    }
+    .btnProduct{
+        padding: 5%;
+    }
+    .btnProduct a{
+        font-size: 1em;
+    }
+    /*Newsletter*/
+    .newsletter h2{
+        font-size: 2em;
+        padding-bottom: 1%;
+    }
+    .newsletter .email{
+        padding: 0.6%;
+    }
+    .newsletter .Join{
+        font-size: 1.2em;
+        padding-left: 1%;
+    }
+    /*Footer*/
+    .footerNav li{
+        font-size: 1em;
+    }
+
+}
+@media (min-width: 1440px) {
+    .menu{
+        right: 23em;
+    }
+    h1{
+        left: 3em;
+    }
+    /*Main*/
+    .ImagenMain{
+        width: 60%;
+        min-height: 20%;
+    }
+    .Discover{
+        top: 29em;
+        left: 35%;
+    }
+    .btnCollection{
+        top: 26em;
+        left: 28%;
+        padding: 6%;
+    }
+    .btnCollection a{
+        font-size: 1.5em;
+    }
+    /*Products*/
+    .Container h2{
+        font-size: 3em;
+    }
+    .btnProduct{
+        padding: 5%;
+    }
+    .btnProduct a{
+        font-size:1.2em;
+    }
+    /*Newsletter*/
+    .newsletter h2{
+        font-size: 2.5em;
+        padding-bottom: 1%;
+    }
+    .newsletter .email{
+        padding: 0.8%;
+    }
+    .newsletter .Join{
+        font-size: 1.4em;
+        padding-left: 1%;
+    }
+    /*Footer*/
+    .footerNav li{
+        font-size: 1em;
+    }
+
 }
