@@ -1,0 +1,8 @@
+
+#Fuentes  
+
+url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap')
+url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap')
+
+
+#Colors
