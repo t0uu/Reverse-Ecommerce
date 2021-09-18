@@ -10,7 +10,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #000807;
+    background-color: var(--primary);
 }
 p,li,button{
     font-family: 'PT Serif', serif;
@@ -188,6 +188,7 @@ p,li,button{
     }
     .footerNav li{
         font-size: 12px;
+        list-style: none;
         margin: 6px;
         text-align: center;
     }
@@ -233,18 +234,18 @@ p,li,button{
 }
 @media (min-width: 425px) {
     header{
-        width: 115%;
+      width: 100vmin;
         margin: 0;
     }
     h1{
         margin-left: 40%;
     }
     .ImagenMain{
-        min-width: 80vh;
+        min-width: 80vmin;
     }
     .Discover{
         top:16em;
-        left: 20%;
+        left: 15%;
     }
     .Discover h2{
         font-size: 1.4em;
@@ -253,4 +254,41 @@ p,li,button{
         top: 16em;
         left: 33%;
     }
+    /*Section Product*/
+    .Container{
+        width: 100%;
+    }
+    .ImgProduct img{
+        width: 250px;
+    }
+}
+@media (min-width: 768px) {
+    header{
+    width: 100%;
+    }
+    main{
+        width: 100%;
+    }
+    .ImagenMain{
+      max-width: 100%;
+    }
+    .Discover{
+        top: 25em;
+        left: 20%;
+    }
+    .Discover h2{
+        font-size: 2em;
+    }
+    .btnCollection{
+        top: 22em;
+        left: 33%;
+        padding: 4%;
+    }
+    .ImgProduct img{
+        width: 300px;
+    }
+    .btnProduct{
+        padding: 2%;
+    }
+    
 }
