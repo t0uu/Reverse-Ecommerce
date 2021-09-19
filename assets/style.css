@@ -210,6 +210,167 @@ p,li,button{
     footer{
         border-top: 1px solid #fbf9ff3c;
     }
+    /*Contact*/
+    .CajaContacto h2{
+        color: var(--secundary);
+        padding: 5%;
+    }
+    .CajaContacto form{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        text-align: center;
+        align-items: center;
+        width: 80%;
+    }
+    .CajaContacto form input{
+        display: flex;
+        border: 2px solid var(--fourth);
+        border-radius: 4px;
+    }
+    .CajaContacto .forming{
+        width: 50%;
+        text-align: center;
+        margin:auto;
+        align-items: center;
+    }
+    .CajaContacto form label{
+        font-size: 18px;
+        padding-bottom: 10px;
+    }
+    .CajaContacto form .text{
+        border: 2px solid var(--fourth);
+        border-radius: 4px;
+    }
+    /*About Us*/
+    .About-us{
+        display: flex;
+        flex-direction:column;
+        text-align: center;
+        color: var(--secundary)
+    }
+    .About-us h2{
+        padding: 2%;
+    }
+    .About-us .ImgAbout{
+        width: 50%;
+        margin: auto;
+    }
+    .About-us p{
+        font-size: 12px;
+        padding: 5%;
+    }
+
+    /*Product Compra*/
+    .ProductCompra{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+    .Compra {
+        width: 50%;
+        margin: auto;
+    }
+    .CaracteristicasProduct{
+        color: var(--secundary);
+        display: flex;
+        flex-direction: column;
+        padding: 1%;
+    }
+    .CaracteristicasProduct .Caja1{
+        text-align: center;
+    }
+    .CaracteristicasProduct h2{
+        text-align: center;
+        color: var(--secundary);
+    }
+    .CaracteristicasProduct .color{
+        background-color: beige;
+        display: inline-block;
+        cursor: pointer;
+        height: 24px;
+        width: 24px;
+        opacity: 0.7;
+        border: 1px solid var(--fourth);
+        margin-left: 10%;
+    }
+    .CaracteristicasProduct .color2{
+        background-color: purple;
+        display: inline-block;
+        cursor: pointer;
+        height: 24px;
+        width: 24px;
+        opacity: 0.7;
+        border: 1px solid var(--primary);
+        margin-left: 5%;
+    }
+    .CaracteristicasProduct .color3{
+        background-color: rgb(72, 148, 247);
+        display: inline-block;
+        cursor: pointer;
+        height: 24px;
+        width: 24px;
+        opacity: 0.7;
+        border: 1px solid var(--primary);
+        margin-left: 5%;
+    }
+    .CaracteristicasProduct .color4{
+        background-color: rgb(255, 153, 142);
+        display: inline-block;
+        cursor: pointer;
+        height: 24px;
+        width: 24px;
+        opacity: 0.7;
+        border: 1px solid var(--primary);
+        margin-left: 5%;
+    }
+    
+    .CaracteristicasProduct .size{
+        background-color: white;
+        display: block;
+        cursor: pointer;
+        color: var(--primary);
+        height: 25%;
+        width: 25%;
+        padding: 1%;
+        margin-left: 15px;
+        text-align: center;
+        text-transform: capitalize;
+        border: 1px solid var(--fourth);
+    }
+    .CaracteristicasProduct .CajaSize{
+        display: flex;
+        padding: 2%;
+    }
+    .CaracteristicasProduct hr{
+        width: 150px;
+        margin: auto;
+        margin-top: 5%;
+        opacity: 19%;
+        margin-bottom: 5%;
+  }
+  .CaracteristicasProduct .Cantidad{
+      margin-bottom: 20px;
+  }
+  .CaracteristicasProduct #cantidad{
+      width: 15%;
+      position: relative;
+      left: 12em;
+      padding: 0.9%;
+}
+.CaracteristicasProduct .btnCart{
+    background-color: var(--fourth);
+    color: var(--fifth);
+    border: none;
+    border-radius: 3px;
+    width: 50%;
+    padding: 0.8em;
+    margin: auto;
+    margin-bottom: 10px;
+}
+.CaracteristicasProduct .btnCart:hover{
+    background-color: #551211;
+    color: var(--primary);
 }
 @media (min-width: 375px ) {
     header{
@@ -235,6 +396,25 @@ p,li,button{
     .btnCollection{
         top: 13em;
         left: 7em;
+    }
+    /*Product*/
+    .CaracteristicasProduct .size{
+        margin-left: 20px;
+    }
+    .CaracteristicasProduct .color{
+        margin-left: 6%;
+    }
+    .CaracteristicasProduct .color2{
+        margin-left: 6%;
+    }
+    .CaracteristicasProduct .color3{
+        margin-left: 6%;
+    }
+    .CaracteristicasProduct .color4{
+        margin-left: 6%;
+    }
+    .CaracteristicasProduct #cantidad{
+        left: 15em;
     }
 }
 @media (min-width: 425px) {
@@ -266,6 +446,26 @@ p,li,button{
     .ImgProduct img{
         width: 250px;
     }
+    /*Product*/
+    .CaracteristicasProduct .size{
+        margin-left: 25px;
+    }
+    .CaracteristicasProduct #cantidad{
+        left: 18em;
+    }
+    .CaracteristicasProduct .color{
+        margin-left: 8%;
+    }
+    .CaracteristicasProduct .color2{
+        margin-left: 8%;
+    }
+    .CaracteristicasProduct .color3{
+        margin-left: 8%;
+    }
+    .CaracteristicasProduct .color4{
+        margin-left: 8%;
+    }
+
 }
 @media (min-width: 768px) {
     header{
@@ -300,43 +500,93 @@ p,li,button{
     .btnProduct{
         padding: 2%;
     }
-    
+    .CajaContacto form{
+        width: 260px;
+    }
+    /*Product*/
+    .CaracteristicasProduct .color{
+        height: 30px;
+        width: 30px;
+    }
+    .CaracteristicasProduct .color2{
+        height: 30px;
+        width: 30px;
+    }
+    .CaracteristicasProduct .color3{
+        height: 30px;
+        width: 30px;
+    }
+    .CaracteristicasProduct .color4{
+        height: 30px;
+        width: 30px;
+    }
+    .CaracteristicasProduct .TextoShop{
+        font-size: 1.5em;
+    }
+    .CaracteristicasProduct .size{
+        margin-left: 38px;
+        padding: 0.4%;
+        font-size: 24px;
+    }
+    .CaracteristicasProduct #cantidad{
+        left:34em;
+        padding: 1.6%;
+        font-size: 14px;
+    }
+    .CaracteristicasProduct .btnCart{
+        width: 40%;
+        padding: 1.2em;
+        font-size: 1em;
+    }
 }
 @media (min-width: 1024px) {
     header{
         display: flex;
+        flex-direction: column;
         justify-content: center;
+        text-align: center;
         padding: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        position: sticky;
     }
     h1{
+        /* display: block; */
         font-size: 2em;
-        position: relative;
-        left: 6em;
+        position:relative;
+        right: 20%;
     }
     .menu{
-        right: 16.5em;
+        position:initial;
         display: flex;
-        flex:auto
+        justify-content: center;
+        margin-left: 100px;
+        left: 10em;
     }
     .menu:hover .dropdown{
         display: flex;
     }
     .dropdown{
         display: flex;
-        position: static;
+        position: unset;
         flex-direction: row;
         justify-content: center;
         background-color: transparent;
         min-width: 800px;
-        margin-top: 10%;
-        margin-right: 10%;
+        /* margin-top: 10%; */
+        margin-right: 8%;
     }
     .icon{
         display: none;
     }
+    .bolsa{
+        position: relative;
+        top: 30px;
+    }
     .dropdown ul{
-        display: flex;
-        flex: auto;
+        /* display: flex; */
+        /* flex: auto; */
         padding: 1px;
         padding-left: 20px;
     }
@@ -379,13 +629,84 @@ p,li,button{
         margin: auto;
         flex-wrap: wrap;
     }
+    /*Contact*/
+    .CajaContacto h2{
+        font-size: 2.5em;
+    }
+    .CajaContacto form{
+        width: 600px;
+    }
+    .CajaContacto .Forming{
+        width: 350px;
+    }
+    .CajaContacto form .text{
+        width: 100%;
+    }
+     /*product*/
+     .ProductCompra {
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+    }
+    .ProductCompra .Compra{
+        width: 25%;
+    }
+    .CaracteristicasProduct #cantidad{
+        left: 9em;
+    }
+    .CaracteristicasProduct .CajaSize{
+        padding: 4%;
+    }
+    .CaracteristicasProduct .size{
+        padding: 5%;
+        width: 29%;
+        height: 37px;
+        font-size: 16px;
+        margin-left: 14px;
+
+    }
+    .CaracteristicasProduct .color{
+        margin-left: 17%;
+        height: 26px;
+        width: 26px;
+    }
+    .CaracteristicasProduct .color2{
+        margin-left: 17%;
+        height: 26px;
+        width: 26px;
+    }
+    .CaracteristicasProduct .color3{
+        margin-left: 17%;
+        height: 26px;
+        width: 26px;
+    }
+    .CaracteristicasProduct .color4{
+        margin-left: 17%;
+        height: 26px;
+        width: 26px;
+    }
+    .CaracteristicasProduct .TextoShop{
+        font-size: 1.2em;
+    }
+    .CaracteristicasProduct .btnCart{
+        width: 60%;
+        padding: 1em;
+        font-size: 0.9em;
+    }
 }
 @media (min-width: 1285px) {
-    h1{
-        left: 4.5em;
+    header{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
     }
     .menu{
-        right: 19em;
+        display: flex;
+        text-align: center;
+        margin-left: 150px;
+    }
+    h1{
+        left: -280px;
     }
     /*main*/
     .ImagenMain{
@@ -427,14 +748,65 @@ p,li,button{
     .footerNav li{
         font-size: 1em;
     }
+    /*Product*/
+    .CaracteristicasProduct{
+        padding: 5%;
+    }
+    .CaracteristicasProduct h2{
+        font-size: 2.5em;
+    }
+    .CaracteristicasProduct p{
+        font-size: 1.5em;
+    }
+    .CaracteristicasProduct hr{
+        width: 250px;
+    }
+    .CaracteristicasProduct .TextoShop{
+        position: relative;
+        right: 40px;
+        font-size: 1.9em;
+    }
+    .CaracteristicasProduct .color{
+        margin-left: 22%;
+    }
+    .CaracteristicasProduct .color2{
+        margin-left: 22%;
+    }
+    .CaracteristicasProduct .color3{
+        margin-left: 22%;
+    }
+    .CaracteristicasProduct .color4{
+        margin-left: 22%;
+    }
+    .CaracteristicasProduct .size{
+        height: 45px;
+        margin-left: 18px;
+    }
+    .CaracteristicasProduct #cantidad{
+        left: 14em;
+    }
+    .CaracteristicasProduct .btnCart{
+        font-size: 1em;
+        padding: 1em;
+    }
 
 }
 @media (min-width: 1440px) {
-    .menu{
-        right: 23em;
+    header{
+        width: 100%;
+        position: sticky;
     }
+    .menu{
+        right: 10%;
+        /* position:initial; */
+        display: flex;
+        justify-content: center;
+        margin-left: 200px;
+        left: 10em;
+        }
     h1{
-        left: 3em;
+        text-align: center;
+        left: -290px;
     }
     /*Main*/
     .ImagenMain{
@@ -479,5 +851,46 @@ p,li,button{
     .footerNav li{
         font-size: 1em;
     }
-
+    /*Contact*/
+    .CajaContacto h2{
+        font-size: 2.5em;
+    }
+    .CajaContacto form{
+        width: 100%;
+    }
+    .CajaContacto form label{
+        font-size: 25px;
+    }
+    .CajaContacto .Forming{
+        width: 320px;
+        padding-bottom: 1px;
+    }
+    .CajaContacto form .text{
+        width: 100%;
+    }
+    /*About Us*/
+    .About-us{
+        display: flex;
+        flex-direction: column;
+    }
+    .About-us h2{
+        color: var(--secundary);
+        text-align: center;
+        padding: 2%;
+        font-size: 2em;
+        text-transform: uppercase;
+    }
+    .About-us .ImgAbout{
+        width: 50%;
+        margin: auto;
+    }
+    .About-us p{
+        color: var(--secundary);
+        font-size: 15px;
+        padding: 5%;
+        margin: auto;
+        text-transform: lowercase;
+        text-align: center;
+    }
+}
 }
