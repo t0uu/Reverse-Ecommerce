@@ -228,6 +228,18 @@ p,li,button{
         border: 2px solid var(--fourth);
         border-radius: 4px;
     }
+    .CajaContacto .btnForm{
+        width: 30%;
+        margin-bottom: 2%;
+        background-color: var(--fourth);
+        color:var(--fifth);
+        border: none;
+        border-radius: 2px;
+        padding: 2%;
+    }
+    .CajaContacto .btnForm:hover{
+        color: var(--primary);
+    }
     .CajaContacto .forming{
         width: 50%;
         text-align: center;
@@ -642,6 +654,9 @@ p,li,button{
     .CajaContacto form .text{
         width: 100%;
     }
+    .CajaContacto .btnForm{
+        width: 20%;
+    }
      /*product*/
      .ProductCompra {
         display: flex;
@@ -692,6 +707,15 @@ p,li,button{
         width: 60%;
         padding: 1em;
         font-size: 0.9em;
+    }
+}
+@media (min-width: 1199px) {
+    h1{
+        left: -290px;
+    }
+    .Discover{
+        top: 30em;
+        left: 30%;
     }
 }
 @media (min-width: 1285px) {
@@ -868,6 +892,10 @@ p,li,button{
     .CajaContacto form .text{
         width: 100%;
     }
+    .CajaContacto .btnForm{
+        width: 8%;
+        padding: 1%;
+    }
     /*About Us*/
     .About-us{
         display: flex;
@@ -893,4 +921,13 @@ p,li,button{
         text-align: center;
     }
 }
+}
+@media (min-width: 1920px) {
+    h1{
+        left: -400px;
+    }
+    .Discover{
+        top: 36em;
+        left: 38%;
+    }
 }
