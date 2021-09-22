@@ -2,22 +2,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 /* font-family: 'Bebas Neue', cursive; */
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+
 /* font-family: 'PT Serif', serif; */
 /*Globales*/
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     background-color: var(--primary);
 }
-p,li,button{
+
+p,
+li,
+button {
     font-family: 'PT Serif', serif;
     text-transform: uppercase;
 }
+
+
+
 /*Colores*/
-:root{
+:root {
     --primary: #000807;
     --primary-light: rgba(0, 0, 0, 0.898);
     --secundary: #e0ca3c;
@@ -27,7 +35,7 @@ p,li,button{
 }
 
 @media (min-width: 320px) {
-    header{
+    header {
         display: flex;
         width: 100%;
         justify-content: space-between;
@@ -39,105 +47,120 @@ p,li,button{
         top: 0;
         z-index: 999;
     }
-    h1{
+
+    h1 {
         font-family: 'Bebas Neue', cursive;
         /* padding-right: 10px; */
-        margin-left:32%;
+        margin-left: 32%;
         margin-top: 5px;
         font-size: 1.3em;
     }
-    h1 a:hover{
+
+    h1 a:hover {
         color: var(--three);
     }
-    
-    header a{
+
+    header a {
         text-decoration: none;
         color: var(--secundary);
         font-size: 1.5em;
         margin-top: 10px;
     }
+
     /*Menu*/
-    
-    .menu{
+
+    .menu {
         position: relative;
         display: inline-block;
         /* margin-left: auto; */
     }
-    nav .icon{
+
+    nav .icon {
         padding: 12px;
         font-size: 1.4em;
     }
-    .dropdown{
+
+    .dropdown {
         display: none;
         position: absolute;
         background-color: var(--primary-light);
         min-width: 220px;
         right: -25px;
-        top:59px;
+        top: 59px;
         padding: 12px 16px;
     }
-    
-    .menu:hover .dropdown{
+
+    .menu:hover .dropdown {
         display: block;
     }
-    
-    .dropdown li{
-        list-style:none;
+
+    .dropdown li {
+        list-style: none;
     }
-    
-    .dropdown li a{
+
+    .dropdown li a {
         color: var(--secundary);
         font-size: 1.2em;
     }
-    .dropdown li a:hover{
+
+    .dropdown li a:hover {
         color: var(--three);
     }
+
     /*Main*/
-    .ImagenMain{
+    .ImagenMain {
         position: block;
         width: 100%;
     }
-    .Discover{
-        position:absolute;
+
+    .Discover {
+        position: absolute;
         top: 11.5em;
         left: 10%;
     }
-    .Discover h2{
+
+    .Discover h2 {
         font-size: 1.1em;
         text-transform: uppercase;
         color: var(--fourth);
     }
-    .btnCollection{
-        position: relative; 
+
+    .btnCollection {
+        position: relative;
         left: 5.6em;
-        top: 11.4em;  
+        top: 11.4em;
         background-color: var(--fourth);
         border: none;
         padding: 0.8em;
-        opacity: 85%; 
+        opacity: 85%;
     }
-    .btnCollection a{
-        color:var(--fifth);
+
+    .btnCollection a {
+        color: var(--fifth);
         text-decoration: none;
     }
-    .btnCollection a:hover{
+
+    .btnCollection a:hover {
         color: var(--primary);
     }
+
     /*Section Product*/
-    .Container{
+    .Container {
         display: flex;
         flex-direction: column;
         margin: auto;
         width: 100%;
 
     }
-    .Container h2{
+
+    .Container h2 {
         color: var(--secundary);
         padding-top: 10%;
         text-align: center;
         font-family: 'PT Serif', serif;
     }
-    .Product{
+
+    .Product {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -145,77 +168,141 @@ p,li,button{
         color: var(--fifth);
         margin: 2%;
     }
-    .Product p{
+
+    .Product p {
         color: var(--secundary);
         padding: 1%;
     }
-    .btnProduct{
+
+    .btnProduct {
         border: none;
         background-color: var(--fourth);
         opacity: 75%;
         padding: 3%;
         border-radius: 4px;
     }
-    .btnProduct:hover{
+
+    .btnProduct:hover {
         opacity: 90%;
     }
-    .btnProduct a{
+
+    .btnProduct a {
         color: var(--fifth);
         text-decoration: none;
     }
-    .btnProduct a:hover{
+
+    .btnProduct a:hover {
         color: var(--primary);
     }
-    .ImgProduct img{
+
+    .ImgProduct img {
         align-items: center;
         width: 200px;
-       }
+    }
+/*Animaciones*/
+.ImgProduct img, .EstrellaCaja{
+    position: relative;
+}
+.EstrellaCaja{
+    z-index: 10;
+}
+.EstrellaCaja .sticker{
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    background: url(./sticker.png);
+    background-repeat: no-repeat;
+    filter: hue-rotate(230deg);
+    background-size: 75px;
+    top:-20px;
+    left: 80px;
+    animation-name: star;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes star{
+    100%{
+        transform:rotate(1turn)
+    }
+}
+.EstrellaCaja .msg{
+    position: relative;
+    left: 85px;
+    top: 13px;
+    font-size: 9px;
+    text-transform: uppercase;
+}
+
+button:hover{
+animation-name: btn;
+animation-duration: 2s;
+animation-timing-function:ease;
+}
+@keyframes btn {
+    from{
+        background-color: var(--fourth);
+    }
+    to{
+        background-color: var(--secundary);
+        color:var(--primary)
+    }
+    
+}
     /*Newsletter*/
-    .newsletter{
+    .newsletter {
         padding: 5%;
         text-align: center;
-        color:var(--fifth);
+        color: var(--fifth);
     }
-    form label{
+
+    form label {
         color: var(--secundary);
     }
 
     /*Footer*/
-    .footerNav{
+    .footerNav {
         display: flex;
         justify-content: center;
         padding: 4%;
         /* flex-direction: column; */
         margin-top: 2%;
     }
-    .footerNav li{
+
+    .footerNav li {
         font-size: 12px;
         list-style: none;
         margin: 6px;
         text-align: center;
     }
-    .footerNav li a{
+
+    .footerNav li a {
         text-decoration: none;
         color: var(--secundary);
     }
-    footer p{
+
+    footer p {
         font-size: 10px;
         text-align: center;
-        color:var(--fifth);
+        color: var(--fifth);
     }
-    footer p a{
+
+    footer p a {
         font-size: 10px;
         color: var(--secundary);
     }
-    footer{
+
+    footer {
         border-top: 1px solid #fbf9ff3c;
     }
+
     /*Contact*/
-    .CajaContacto h2{
+    .CajaContacto h2 {
         color: var(--secundary);
         padding: 5%;
     }
-    .CajaContacto form{
+
+    .CajaContacto form {
         display: flex;
         flex-direction: column;
         margin: auto;
@@ -223,80 +310,96 @@ p,li,button{
         align-items: center;
         width: 80%;
     }
-    .CajaContacto form input{
+
+    .CajaContacto form input {
         display: flex;
         border: 2px solid var(--fourth);
         border-radius: 4px;
     }
-    .CajaContacto .btnForm{
+
+    .CajaContacto .btnForm {
         width: 30%;
         margin-bottom: 2%;
         background-color: var(--fourth);
-        color:var(--fifth);
+        color: var(--fifth);
         border: none;
         border-radius: 2px;
         padding: 2%;
+        cursor: pointer;
     }
-    .CajaContacto .btnForm:hover{
+
+    .CajaContacto .btnForm:hover {
         color: var(--primary);
     }
-    .CajaContacto .forming{
+
+    .CajaContacto .forming {
         width: 50%;
         text-align: center;
-        margin:auto;
+        margin: auto;
         align-items: center;
     }
-    .CajaContacto form label{
+
+    .CajaContacto form label {
         font-size: 18px;
         padding-bottom: 10px;
     }
-    .CajaContacto form .text{
+
+    .CajaContacto form .text {
         border: 2px solid var(--fourth);
         border-radius: 4px;
     }
+
     /*About Us*/
-    .About-us{
+    .About-us {
         display: flex;
-        flex-direction:column;
+        flex-direction: column;
         text-align: center;
         color: var(--secundary)
     }
-    .About-us h2{
+
+    .About-us h2 {
         padding: 2%;
     }
-    .About-us .ImgAbout{
+
+    .About-us .ImgAbout {
         width: 50%;
         margin: auto;
     }
-    .About-us p{
+
+    .About-us p {
         font-size: 12px;
         padding: 5%;
     }
 
     /*Product Compra*/
-    .ProductCompra{
+    .ProductCompra {
         display: flex;
         flex-direction: column;
         margin: auto;
     }
+
     .Compra {
         width: 50%;
         margin: auto;
     }
-    .CaracteristicasProduct{
+
+    .CaracteristicasProduct {
         color: var(--secundary);
         display: flex;
         flex-direction: column;
         padding: 1%;
     }
-    .CaracteristicasProduct .Caja1{
+
+    .CaracteristicasProduct .Caja1 {
         text-align: center;
     }
-    .CaracteristicasProduct h2{
+
+    .CaracteristicasProduct h2 {
         text-align: center;
         color: var(--secundary);
     }
-    .CaracteristicasProduct .color{
+
+    .CaracteristicasProduct .color {
         background-color: beige;
         display: inline-block;
         cursor: pointer;
@@ -306,7 +409,8 @@ p,li,button{
         border: 1px solid var(--fourth);
         margin-left: 10%;
     }
-    .CaracteristicasProduct .color2{
+
+    .CaracteristicasProduct .color2 {
         background-color: purple;
         display: inline-block;
         cursor: pointer;
@@ -316,7 +420,8 @@ p,li,button{
         border: 1px solid var(--primary);
         margin-left: 5%;
     }
-    .CaracteristicasProduct .color3{
+
+    .CaracteristicasProduct .color3 {
         background-color: rgb(72, 148, 247);
         display: inline-block;
         cursor: pointer;
@@ -326,7 +431,8 @@ p,li,button{
         border: 1px solid var(--primary);
         margin-left: 5%;
     }
-    .CaracteristicasProduct .color4{
+
+    .CaracteristicasProduct .color4 {
         background-color: rgb(255, 153, 142);
         display: inline-block;
         cursor: pointer;
@@ -336,8 +442,8 @@ p,li,button{
         border: 1px solid var(--primary);
         margin-left: 5%;
     }
-    
-    .CaracteristicasProduct .size{
+
+    .CaracteristicasProduct .size {
         background-color: white;
         display: block;
         cursor: pointer;
@@ -350,584 +456,794 @@ p,li,button{
         text-transform: capitalize;
         border: 1px solid var(--fourth);
     }
-    .CaracteristicasProduct .CajaSize{
+
+    .CaracteristicasProduct .CajaSize {
         display: flex;
         padding: 2%;
     }
-    .CaracteristicasProduct hr{
+
+    .CaracteristicasProduct hr {
         width: 150px;
         margin: auto;
         margin-top: 5%;
         opacity: 19%;
         margin-bottom: 5%;
-  }
-  .CaracteristicasProduct .Cantidad{
-      margin-bottom: 20px;
-  }
-  .CaracteristicasProduct #cantidad{
-      width: 15%;
-      position: relative;
-      left: 12em;
-      padding: 0.9%;
-}
-.CaracteristicasProduct .btnCart{
-    background-color: var(--fourth);
-    color: var(--fifth);
-    border: none;
-    border-radius: 3px;
-    width: 50%;
-    padding: 0.8em;
-    margin: auto;
-    margin-bottom: 10px;
-}
-.CaracteristicasProduct .btnCart:hover{
-    background-color: #551211;
-    color: var(--primary);
-}
-@media (min-width: 375px ) {
-    header{
-        width: 100%;
-        margin: 0;
-    }
-    h1{
-        margin-left: 40%;
-    }
-    .dropdown{
-        top: 60px
-    }
-    .ImagenMain{
-        max-width: 100vh;
-    }
-    .Discover{
-        top:13em;
-        left: 3em;
-    }
-    .Discover h2{
-        font-size: 1.3em;
-    }
-    .btnCollection{
-        top: 13em;
-        left: 7em;
-    }
-    /*Product*/
-    .CaracteristicasProduct .size{
-        margin-left: 20px;
-    }
-    .CaracteristicasProduct .color{
-        margin-left: 6%;
-    }
-    .CaracteristicasProduct .color2{
-        margin-left: 6%;
-    }
-    .CaracteristicasProduct .color3{
-        margin-left: 6%;
-    }
-    .CaracteristicasProduct .color4{
-        margin-left: 6%;
-    }
-    .CaracteristicasProduct #cantidad{
-        left: 15em;
-    }
-}
-@media (min-width: 425px) {
-    header{
-      width: 100vmin;
-        margin: 0;
-    }
-    h1{
-        margin-left: 40%;
-    }
-    .ImagenMain{
-        min-width: 80vmin;
-    }
-    .Discover{
-        top:14.5em;
-        left: 15%;
-    }
-    .Discover h2{
-        font-size: 1.4em;
-    }
-    .btnCollection{
-        top: 16em;
-        left: 33%;
-    }
-    /*Section Product*/
-    .Container{
-        width: 100%;
-    }
-    .ImgProduct img{
-        width: 250px;
-    }
-    /*Product*/
-    .CaracteristicasProduct .size{
-        margin-left: 25px;
-    }
-    .CaracteristicasProduct #cantidad{
-        left: 18em;
-    }
-    .CaracteristicasProduct .color{
-        margin-left: 8%;
-    }
-    .CaracteristicasProduct .color2{
-        margin-left: 8%;
-    }
-    .CaracteristicasProduct .color3{
-        margin-left: 8%;
-    }
-    .CaracteristicasProduct .color4{
-        margin-left: 8%;
     }
 
-}
-@media (min-width: 768px) {
-    header{
-    width: 100%;
+    .CaracteristicasProduct .Cantidad {
+        margin-bottom: 20px;
     }
-    h1{
-        padding-left: 5%;
-    }
-    /*Main*/
-    main{
-        width: 100%;
-    }
-    .ImagenMain{
-      max-width: 100%;
-    }
-    .Discover{
-        top: 25em;
-        left: 20%;
-    }
-    .Discover h2{
-        font-size: 2em;
-    }
-    .btnCollection{
-        top: 22em;
-        left: 33%;
-        padding: 4%;
-    }
-    /*Section products*/
-    .ImgProduct img{
-        width: 300px;
-    }
-    .btnProduct{
-        padding: 2%;
-    }
-    .CajaContacto form{
-        width: 260px;
-    }
-    /*Product*/
-    .CaracteristicasProduct .color{
-        height: 30px;
-        width: 30px;
-    }
-    .CaracteristicasProduct .color2{
-        height: 30px;
-        width: 30px;
-    }
-    .CaracteristicasProduct .color3{
-        height: 30px;
-        width: 30px;
-    }
-    .CaracteristicasProduct .color4{
-        height: 30px;
-        width: 30px;
-    }
-    .CaracteristicasProduct .TextoShop{
-        font-size: 1.5em;
-    }
-    .CaracteristicasProduct .size{
-        margin-left: 38px;
-        padding: 0.4%;
-        font-size: 24px;
-    }
-    .CaracteristicasProduct #cantidad{
-        left:34em;
-        padding: 1.6%;
-        font-size: 14px;
-    }
-    .CaracteristicasProduct .btnCart{
-        width: 40%;
-        padding: 1.2em;
-        font-size: 1em;
-    }
-}
-@media (min-width: 1024px) {
-    header{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        padding: 0;
-        top: 0;
-        left: 0;
-        right: 0;
-        position: sticky;
-    }
-    h1{
-        /* display: block; */
-        font-size: 2em;
-        position:relative;
-        right: 20%;
-    }
-    .menu{
-        position:initial;
-        display: flex;
-        justify-content: center;
-        margin-left: 100px;
-        left: 10em;
-    }
-    .menu:hover .dropdown{
-        display: flex;
-    }
-    .dropdown{
-        display: flex;
-        position: unset;
-        flex-direction: row;
-        justify-content: center;
-        background-color: transparent;
-        min-width: 800px;
-        /* margin-top: 10%; */
-        margin-right: 8%;
-    }
-    .icon{
-        display: none;
-    }
-    .bolsa{
+
+    .CaracteristicasProduct #cantidad {
+        width: 15%;
         position: relative;
-        top: 30px;
-    }
-    .dropdown ul{
-        /* display: flex; */
-        /* flex: auto; */
-        padding: 1px;
-        padding-left: 20px;
-    }
-    .dropdown li{
-        margin-right: 3em;
-    }
-    .dropdown li a{
-        display: flex;
-        font-size: 1.2em;
-
-    }
-    /*Main*/
-    main{
-        display: flex;
-    }
-    .ImagenMain{
-        width: 80%;
-        margin: auto;
-        padding: 1%;
-    }
-    .Discover {
-        top: 28em;
-        left: 28%;
-    }
-    .btnCollection{
-        left:34%;
-        padding: 5%;
-    }
-    .btnCollection a{
-        font-size: 1.2em;
-    }
-    /*Products*/
-    .Container h2{
-        font-size: 2em;
-    }
-     .ContenedorProduct {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        margin: auto;
-        flex-wrap: wrap;
-    }
-    /*Contact*/
-    .CajaContacto h2{
-        font-size: 2.5em;
-    }
-    .CajaContacto form{
-        width: 600px;
-    }
-    .CajaContacto .Forming{
-        width: 350px;
-    }
-    .CajaContacto form .text{
-        width: 100%;
-    }
-    .CajaContacto .btnForm{
-        width: 20%;
-    }
-     /*product*/
-     .ProductCompra {
-        display: flex;
-        flex-direction: row;
-        margin: auto;
-    }
-    .ProductCompra .Compra{
-        width: 25%;
-    }
-    .CaracteristicasProduct #cantidad{
-        left: 9em;
-    }
-    .CaracteristicasProduct .CajaSize{
-        padding: 4%;
-    }
-    .CaracteristicasProduct .size{
-        padding: 5%;
-        width: 29%;
-        height: 37px;
-        font-size: 16px;
-        margin-left: 14px;
-
-    }
-    .CaracteristicasProduct .color{
-        margin-left: 17%;
-        height: 26px;
-        width: 26px;
-    }
-    .CaracteristicasProduct .color2{
-        margin-left: 17%;
-        height: 26px;
-        width: 26px;
-    }
-    .CaracteristicasProduct .color3{
-        margin-left: 17%;
-        height: 26px;
-        width: 26px;
-    }
-    .CaracteristicasProduct .color4{
-        margin-left: 17%;
-        height: 26px;
-        width: 26px;
-    }
-    .CaracteristicasProduct .TextoShop{
-        font-size: 1.2em;
-    }
-    .CaracteristicasProduct .btnCart{
-        width: 60%;
-        padding: 1em;
-        font-size: 0.9em;
-    }
-}
-@media (min-width: 1199px) {
-    h1{
-        left: -290px;
-    }
-    .Discover{
-        top: 30em;
-        left: 30%;
-    }
-}
-@media (min-width: 1285px) {
-    header{
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-    }
-    .menu{
-        display: flex;
-        text-align: center;
-        margin-left: 150px;
-    }
-    h1{
-        left: -280px;
-    }
-    /*main*/
-    .ImagenMain{
-     width: 60%;   
-  }
-    .Discover{
-        top: 27em;
-        left: 33%;
-    }
-    .btnCollection{
-        padding: 4%;
-    }
-    .btnCollection a{
-        font-size: 1.3em;
-    }
-    /*Products*/
-    .Container h2{
-        font-size: 3em;
-    }
-    .btnProduct{
-        padding: 5%;
-    }
-    .btnProduct a{
-        font-size: 1em;
-    }
-    /*Newsletter*/
-    .newsletter h2{
-        font-size: 2em;
-        padding-bottom: 1%;
-    }
-    .newsletter .email{
-        padding: 0.6%;
-    }
-    .newsletter .Join{
-        font-size: 1.2em;
-        padding-left: 1%;
-    }
-    /*Footer*/
-    .footerNav li{
-        font-size: 1em;
-    }
-    /*Product*/
-    .CaracteristicasProduct{
-        padding: 5%;
-    }
-    .CaracteristicasProduct h2{
-        font-size: 2.5em;
-    }
-    .CaracteristicasProduct p{
-        font-size: 1.5em;
-    }
-    .CaracteristicasProduct hr{
-        width: 250px;
-    }
-    .CaracteristicasProduct .TextoShop{
-        position: relative;
-        right: 40px;
-        font-size: 1.9em;
-    }
-    .CaracteristicasProduct .color{
-        margin-left: 22%;
-    }
-    .CaracteristicasProduct .color2{
-        margin-left: 22%;
-    }
-    .CaracteristicasProduct .color3{
-        margin-left: 22%;
-    }
-    .CaracteristicasProduct .color4{
-        margin-left: 22%;
-    }
-    .CaracteristicasProduct .size{
-        height: 45px;
-        margin-left: 18px;
-    }
-    .CaracteristicasProduct #cantidad{
-        left: 14em;
-    }
-    .CaracteristicasProduct .btnCart{
-        font-size: 1em;
-        padding: 1em;
+        left: 12em;
+        padding: 0.9%;
     }
 
-}
-@media (min-width: 1440px) {
-    header{
-        width: 100%;
-        position: sticky;
-    }
-    .menu{
-        right: 10%;
-        /* position:initial; */
-        display: flex;
-        justify-content: center;
-        margin-left: 200px;
-        left: 10em;
-        }
-    h1{
-        text-align: center;
-        left: -290px;
-    }
-    /*Main*/
-    .ImagenMain{
-        width: 60%;
-        min-height: 20%;
-    }
-    .Discover{
-        top: 29em;
-        left: 35%;
-    }
-    .btnCollection{
-        top: 26em;
-        left: 28%;
-        padding: 6%;
-    }
-    .btnCollection a{
-        font-size: 1.5em;
-    }
-    /*Products*/
-    .Container h2{
-        font-size: 3em;
-    }
-    .btnProduct{
-        padding: 5%;
-    }
-    .btnProduct a{
-        font-size:1.2em;
-    }
-    /*Newsletter*/
-    .newsletter h2{
-        font-size: 2.5em;
-        padding-bottom: 1%;
-    }
-    .newsletter .email{
-        padding: 0.8%;
-    }
-    .newsletter .Join{
-        font-size: 1.4em;
-        padding-left: 1%;
-    }
-    /*Footer*/
-    .footerNav li{
-        font-size: 1em;
-    }
-    /*Contact*/
-    .CajaContacto h2{
-        font-size: 2.5em;
-    }
-    .CajaContacto form{
-        width: 100%;
-    }
-    .CajaContacto form label{
-        font-size: 25px;
-    }
-    .CajaContacto .Forming{
-        width: 320px;
-        padding-bottom: 1px;
-    }
-    .CajaContacto form .text{
-        width: 100%;
-    }
-    .CajaContacto .btnForm{
-        width: 8%;
-        padding: 1%;
-    }
-    /*About Us*/
-    .About-us{
-        display: flex;
-        flex-direction: column;
-    }
-    .About-us h2{
-        color: var(--secundary);
-        text-align: center;
-        padding: 2%;
-        font-size: 2em;
-        text-transform: uppercase;
-    }
-    .About-us .ImgAbout{
+    .CaracteristicasProduct .btnCart {
+        background-color: var(--fourth);
+        color: var(--fifth);
+        border: none;
+        border-radius: 3px;
         width: 50%;
+        padding: 0.8em;
         margin: auto;
+        margin-bottom: 10px;
     }
-    .About-us p{
-        color: var(--secundary);
-        font-size: 15px;
-        padding: 5%;
-        margin: auto;
-        text-transform: lowercase;
-        text-align: center;
+
+    .CaracteristicasProduct .btnCart:hover {
+        background-color: #551211;
+        color: var(--primary);
+    }
+
+    @media (min-width: 375px) {
+        header {
+            width: 100%;
+            margin: 0;
+        }
+
+        h1 {
+            margin-left: 40%;
+        }
+
+        .dropdown {
+            top: 60px
+        }
+
+        .ImagenMain {
+            max-width: 100vh;
+        }
+
+        .Discover {
+            top: 13em;
+            left: 3em;
+        }
+
+        .Discover h2 {
+            font-size: 1.3em;
+        }
+
+        .btnCollection {
+            top: 13em;
+            left: 7em;
+        }
+
+        /*Product*/
+        .CaracteristicasProduct .size {
+            margin-left: 20px;
+        }
+
+        .CaracteristicasProduct .color {
+            margin-left: 6%;
+        }
+
+        .CaracteristicasProduct .color2 {
+            margin-left: 6%;
+        }
+
+        .CaracteristicasProduct .color3 {
+            margin-left: 6%;
+        }
+
+        .CaracteristicasProduct .color4 {
+            margin-left: 6%;
+        }
+
+        .CaracteristicasProduct #cantidad {
+            left: 15em;
+        }
+    }
+
+    @media (min-width: 425px) {
+        header {
+            width: 100vmin;
+            margin: 0;
+        }
+
+        h1 {
+            margin-left: 40%;
+        }
+
+        .ImagenMain {
+            min-width: 80vmin;
+        }
+
+        .Discover {
+            top: 14.5em;
+            left: 15%;
+        }
+
+        .Discover h2 {
+            font-size: 1.4em;
+        }
+
+        .btnCollection {
+            top: 16em;
+            left: 33%;
+        }
+
+        /*Section Product*/
+        .Container {
+            width: 100%;
+        }
+
+        .ImgProduct img {
+            width: 250px;
+        }
+
+        /*Product*/
+        .CaracteristicasProduct .size {
+            margin-left: 25px;
+        }
+
+        .CaracteristicasProduct #cantidad {
+            left: 18em;
+        }
+
+        .CaracteristicasProduct .color {
+            margin-left: 8%;
+        }
+
+        .CaracteristicasProduct .color2 {
+            margin-left: 8%;
+        }
+
+        .CaracteristicasProduct .color3 {
+            margin-left: 8%;
+        }
+
+        .CaracteristicasProduct .color4 {
+            margin-left: 8%;
+        }
+
+    }
+
+    @media (min-width: 768px) {
+        header {
+            width: 100%;
+        }
+
+        h1 {
+            padding-left: 5%;
+        }
+
+        /*Main*/
+        main {
+            width: 100%;
+        }
+
+        .ImagenMain {
+            max-width: 100%;
+        }
+
+        .Discover {
+            top: 25em;
+            left: 20%;
+        }
+
+        .Discover h2 {
+            font-size: 2em;
+        }
+
+        .btnCollection {
+            top: 22em;
+            left: 33%;
+            padding: 4%;
+        }
+
+        /*Section products*/
+        .ImgProduct img {
+            width: 300px;
+        }
+
+        .EstrellaCaja .sticker{
+            left: 140px;
+        }
+        .EstrellaCaja .msg{
+            left: 147px;
+        }
+        .btnProduct {
+            padding: 2%;
+        }
+
+        .CajaContacto form {
+            width: 260px;
+        }
+
+        /*Product*/
+        .CaracteristicasProduct .color {
+            height: 30px;
+            width: 30px;
+        }
+
+        .CaracteristicasProduct .color2 {
+            height: 30px;
+            width: 30px;
+        }
+
+        .CaracteristicasProduct .color3 {
+            height: 30px;
+            width: 30px;
+        }
+
+        .CaracteristicasProduct .color4 {
+            height: 30px;
+            width: 30px;
+        }
+
+        .CaracteristicasProduct .TextoShop {
+            font-size: 1.5em;
+        }
+
+        .CaracteristicasProduct .size {
+            margin-left: 38px;
+            padding: 0.4%;
+            font-size: 24px;
+        }
+
+        .CaracteristicasProduct #cantidad {
+            left: 34em;
+            padding: 1.6%;
+            font-size: 14px;
+        }
+
+        .CaracteristicasProduct .btnCart {
+            width: 40%;
+            padding: 1.2em;
+            font-size: 1em;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        header {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            padding: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            position: sticky;
+        }
+
+        h1 {
+            /* display: block; */
+            font-size: 2em;
+            position: relative;
+            right: 20%;
+        }
+
+        .menu {
+            position: initial;
+            display: flex;
+            justify-content: center;
+            margin-left: 100px;
+            left: 10em;
+        }
+
+        .menu:hover .dropdown {
+            display: flex;
+        }
+
+        .dropdown {
+            display: flex;
+            position: unset;
+            flex-direction: row;
+            justify-content: center;
+            background-color: transparent;
+            min-width: 800px;
+            /* margin-top: 10%; */
+            margin-right: 8%;
+        }
+
+        .icon {
+            display: none;
+        }
+
+        .bolsa {
+            position: relative;
+            top: 30px;
+        }
+
+        .dropdown ul {
+            /* display: flex; */
+            /* flex: auto; */
+            padding: 1px;
+            padding-left: 20px;
+        }
+
+        .dropdown li {
+            margin-right: 3em;
+        }
+
+        .dropdown li a {
+            display: flex;
+            font-size: 1.2em;
+
+        }
+
+        /*Main*/
+        main {
+            display: flex;
+        }
+
+        .ImagenMain {
+            width: 80%;
+            margin: auto;
+            padding: 1%;
+        }
+
+        .Discover {
+            top: 28em;
+            left: 28%;
+        }
+
+        .btnCollection {
+            left: 34%;
+            padding: 5%;
+        }
+
+        .btnCollection a {
+            font-size: 1.2em;
+        }
+
+        /*Products*/
+        .Container h2 {
+            font-size: 2em;
+        }
+
+        .ContenedorProduct {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin: auto;
+            flex-wrap: wrap;
+        }
+
+        /*Contact*/
+        .CajaContacto h2 {
+            font-size: 2.5em;
+        }
+
+        .CajaContacto form {
+            width: 600px;
+        }
+
+        .CajaContacto .Forming {
+            width: 350px;
+        }
+
+        .CajaContacto form .text {
+            width: 100%;
+        }
+
+        .CajaContacto .btnForm {
+            width: 20%;
+        }
+
+        /*product*/
+        .ProductCompra {
+            display: flex;
+            flex-direction: row;
+            margin: auto;
+        }
+
+        .ProductCompra .Compra {
+            width: 25%;
+        }
+
+        .CaracteristicasProduct #cantidad {
+            left: 9em;
+        }
+
+        .CaracteristicasProduct .CajaSize {
+            padding: 4%;
+        }
+
+        .CaracteristicasProduct .size {
+            padding: 5%;
+            width: 29%;
+            height: 37px;
+            font-size: 16px;
+            margin-left: 14px;
+
+        }
+
+        .CaracteristicasProduct .color {
+            margin-left: 17%;
+            height: 26px;
+            width: 26px;
+        }
+
+        .CaracteristicasProduct .color2 {
+            margin-left: 17%;
+            height: 26px;
+            width: 26px;
+        }
+
+        .CaracteristicasProduct .color3 {
+            margin-left: 17%;
+            height: 26px;
+            width: 26px;
+        }
+
+        .CaracteristicasProduct .color4 {
+            margin-left: 17%;
+            height: 26px;
+            width: 26px;
+        }
+
+        .CaracteristicasProduct .TextoShop {
+            font-size: 1.2em;
+        }
+
+        .CaracteristicasProduct .btnCart {
+            width: 60%;
+            padding: 1em;
+            font-size: 0.9em;
+        }
+    }
+
+    @media (min-width: 1199px) {
+        h1 {
+            left: -290px;
+        }
+
+        .Discover {
+            top: 30em;
+            left: 30%;
+        }
+    }
+
+    @media (min-width: 1285px) {
+        header {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .menu {
+            display: flex;
+            text-align: center;
+            margin-left: 150px;
+        }
+
+        h1 {
+            left: -280px;
+        }
+
+        /*main*/
+        .ImagenMain {
+            width: 60%;
+        }
+
+        .Discover {
+            top: 27em;
+            left: 33%;
+        }
+
+        .btnCollection {
+            padding: 4%;
+        }
+
+        .btnCollection a {
+            font-size: 1.3em;
+        }
+
+        /*Products*/
+        .Container h2 {
+            font-size: 3em;
+        }
+
+        .btnProduct {
+            padding: 5%;
+        }
+
+        .btnProduct a {
+            font-size: 1em;
+        }
+
+        /*Newsletter*/
+        .newsletter h2 {
+            font-size: 2em;
+            padding-bottom: 1%;
+        }
+
+        .newsletter .email {
+            padding: 0.6%;
+        }
+
+        .newsletter .Join {
+            font-size: 1.2em;
+            padding-left: 1%;
+        }
+
+        /*Footer*/
+        .footerNav li {
+            font-size: 1em;
+        }
+
+        /*Product*/
+        .CaracteristicasProduct {
+            padding: 5%;
+        }
+
+        .CaracteristicasProduct h2 {
+            font-size: 2.5em;
+        }
+
+        .CaracteristicasProduct p {
+            font-size: 1.5em;
+        }
+
+        .CaracteristicasProduct hr {
+            width: 250px;
+        }
+
+        .CaracteristicasProduct .TextoShop {
+            position: relative;
+            right: 40px;
+            font-size: 1.9em;
+        }
+
+        .CaracteristicasProduct .color {
+            margin-left: 22%;
+        }
+
+        .CaracteristicasProduct .color2 {
+            margin-left: 22%;
+        }
+
+        .CaracteristicasProduct .color3 {
+            margin-left: 22%;
+        }
+
+        .CaracteristicasProduct .color4 {
+            margin-left: 22%;
+        }
+
+        .CaracteristicasProduct .size {
+            height: 45px;
+            margin-left: 18px;
+        }
+
+        .CaracteristicasProduct #cantidad {
+            left: 14em;
+        }
+
+        .CaracteristicasProduct .btnCart {
+            font-size: 1em;
+            padding: 1em;
+        }
+
+    }
+
+    @media (min-width: 1440px) {
+        header {
+            width: 100%;
+            position: sticky;
+        }
+
+        .menu {
+            right: 10%;
+            /* position:initial; */
+            display: flex;
+            justify-content: center;
+            margin-left: 200px;
+            left: 10em;
+        }
+
+        h1 {
+            text-align: center;
+            left: -290px;
+        }
+
+        /*Main*/
+        .ImagenMain {
+            width: 60%;
+            min-height: 20%;
+        }
+
+        .Discover {
+            top: 29em;
+            left: 35%;
+        }
+
+        .btnCollection {
+            top: 26em;
+            left: 28%;
+            padding: 6%;
+        }
+
+        .btnCollection a {
+            font-size: 1.5em;
+        }
+
+        /*Products*/
+        .Container h2 {
+            font-size: 3em;
+        }
+
+        .btnProduct {
+            padding: 5%;
+        }
+
+        .btnProduct a {
+            font-size: 1.2em;
+        }
+
+        /*Newsletter*/
+        .newsletter h2 {
+            font-size: 2.5em;
+            padding-bottom: 1%;
+        }
+
+        .newsletter .email {
+            padding: 0.8%;
+        }
+
+        .newsletter .Join {
+            font-size: 1.4em;
+            padding-left: 1%;
+        }
+
+        /*Footer*/
+        .footerNav li {
+            font-size: 1em;
+        }
+
+        /*Contact*/
+        .CajaContacto h2 {
+            font-size: 2.5em;
+        }
+
+        .CajaContacto form {
+            width: 100%;
+        }
+
+        .CajaContacto form label {
+            font-size: 25px;
+        }
+
+        .CajaContacto .Forming {
+            width: 320px;
+            padding-bottom: 1px;
+        }
+
+        .CajaContacto form .text {
+            width: 100%;
+        }
+
+        .CajaContacto .btnForm {
+            width: 8%;
+            padding: 1%;
+        }
+
+        /*About Us*/
+        .About-us {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .About-us h2 {
+            color: var(--secundary);
+            text-align: center;
+            padding: 2%;
+            font-size: 2em;
+            text-transform: uppercase;
+        }
+
+        .About-us .ImgAbout {
+            width: 50%;
+            margin: auto;
+        }
+
+        .About-us p {
+            color: var(--secundary);
+            font-size: 15px;
+            padding: 5%;
+            margin: auto;
+            text-transform: lowercase;
+            text-align: center;
+        }
     }
 }
-}
+
 @media (min-width: 1920px) {
-    h1{
+    h1 {
         left: -400px;
     }
-    .Discover{
+
+    .Discover {
         top: 36em;
         left: 38%;
+    }
+
+    .dropdown li {
+        font-size: 1.5em;
+    }
+
+    .bolsa {
+        font-size: 1.5em;
+        right: 1em;
+    }
+
+    .Container h2 {
+        font-size: 4em;
+    }
+
+    .Product p {
+        font-size: 1.6em;
+    }
+
+    .btnProduct {
+        padding: 7%;
+    }
+
+    .btnProduct a {
+        font-size: 1.5em;
+    }
+
+    .CajaContacto h2 {
+        font-size: 4em;
+    }
+
+    .CajaContacto form label {
+        font-size: 30px;
+    }
+
+    .CajaContacto .Forming {
+        width: 340px;
+        padding: 2%;
+    }
+
+    .CajaContacto form .text {
+        padding: 2%;
+    }
+
+    .CajaContacto .btnForm {
+        width: 10%;
+        padding: 2%;
+        font-size: 1.2em;
+    }
+
+    /*About-Us*/
+    .About-us p {
+        font-size: 25px;
+    }
+
+    /*Footer*/
+    .footerNav li {
+        font-size: 1.5em;
+    }
+
+    footer p {
+        font-size: 18px;
+    }
+
+    footer p a {
+        font-size: 18px;
     }
 }
